@@ -1,0 +1,14 @@
+
+#header {
+    background-color: yellowgreen;
+    text-align: center;
+    }
+    .current {
+        font-weight: bold;             /*выбор жирного описания*/
+        background-color: #ff6600;    /* цвет подстветки текста*/
+    }
+/* 2-ой способ, страница не компилируется вместе с фрагментом
+   включается вывод 2-ой страницы на главную */
+
+
+

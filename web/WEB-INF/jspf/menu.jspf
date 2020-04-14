@@ -1,0 +1,17 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%String pf = request.getRequestURI();%>
+<% String stage = application.getInitParameter("stage");%>
+<hr>
+<%if("debug".equals(stage) ) { %> We are here:<%=pf%> <% } %>
+<hr>
+ <!--
+ <a href="index.jsp" class="current">Main page</a><br/>
+ <a href="page2.jsp" class="other">Page 2</a><br/>
+ <a href="page3.jsp" class="other">Page 3</a><br/>
+ <a href="page4.jsp">Page 4</a><br/>
+ -->
+ <a href="index.jsp" class="<%=(pf.endsWith("index.jsp")||pf.endsWith("/"))?"current":"other"%>">Main page</a><br/>
+ <a href="page2.jsp" class="<%=(pf.endsWith("page2.jsp"))?"current":"other"%>">Page 2</a><br/>
+<a href="page3.jsp" class="<%=(pf.endsWith("page3.jsp"))?"current":"other"%>">Page 3</a><br/>
+ <a href="page4.jsp" class="<%=(pf.endsWith("page4.jsp"))?"current":"other"%>">Page 4</a><br/>
